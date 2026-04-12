@@ -1,0 +1,102 @@
+"CRUD - Create, Read, Update and Delete"
+
+---------------------------------------------------
+del lista[2] 
+-> Aqui o "del" é método que vai deletar;
+-> "lista" é o nome da lista;
+-> "[2]" é o item da lista que vai ser deletado.
+---------------------------------------------------
+
+
+---------------------------------------------------
+lista.append(50)
+-> Aqui "lista" é o nome da lista;
+-> ".append" é o método que está sendo utilizado para adicionar à lista
+-> "(50)" é o valor que será adicionado ao FINAL da lista.
+---------------------------------------------------
+
+
+---------------------------------------------------
+lista.pop()
+-> "lista" é o onome da lista;
+-> ".pop()" é o método usado para remover algum item da lista.
+
+OBS.: quando não é colocado nada dentro do parenteses, ele remove
+sempre o último elemento da lista.
+
+OBS.: já, para remover um item em específico da lista, eu preciso
+colocar o índice dele dentro do parenteses.
+
+OBS.: se eu fizer "v = ultimo_valor = lista.pop()
+a variável 'v' vai me mostrar o elemento que foi removido da lista."
+---------------------------------------------------
+
+
+---------------------------------------------------
+lista.insert(1, 'cla 200')
+-> "lista" é o nome da lista;
+-> "insert" é o método que estou utilizando para adicionar à lista;
+-> "(1,...)" é o índice onde quero adicionar meu novo item;
+-> "(..., 'cla 200')" é o item que estou adicionando à lista.
+---------------------------------------------------
+
+
+---------------------------------------------------
+lista.clear()
+-> Serve para limpar a lista inteira.
+---------------------------------------------------
+
+
+---------------------------------------------------
+Para concatenar duas lista eu posso fazer de dois modos:
+
+lista_a = [1, 2, 3]
+lista_b = [4, 5, 6]
+
+lista_a = lista_a + lista_b
+
+isso vai me dar o mesmo resultado que:
+
+lista_a.extend(lista_b)
+---------------------------------------------------
+
+
+---------------------------------------------------
+Para copiar uma lista em outra lista:
+
+lista_a = ['Luiz', 'Maria', 1, True, 1.2]
+lista_b = lista_a.copy()
+
+- Se eu fizer:
+
+lista_a = ['Luiz', 'Maria', 1, True, 1.2]
+lista_b = lista_a
+
+Tudo que eu alterar em "lista_a" vai mudar em "lista_b"
+e tudo que eu alterar em "lista_b" vai mudar em "lista_a".
+
+Por isso é melhor usar o método ".copy()"
+---------------------------------------------------
+
+
+---------------------------------------------------
+print(*lista)
+Me tras tudo alinhado, como se tudos os itens da lista
+estivessem em uma só linha.
+
+print(*lista, sep = '\n')
+Quando uma lista estiver dentro de outra, vai retornar
+lista por lista, como se fosse um "for" dentro
+de outro "for".
+---------------------------------------------------
+
+
+---------------------------------------------------
+Listas:
+lista_a = []
+- É mutável, ou seja, posso modificá-la, adicionando itens, removando (CRUD);
+
+Tuple;
+tupla_a = 'item_1', 'item_2', 'item_3'
+- É mais prático. Diferente da lista, a tupla eu uso quando não for auterar nada.
+Ela se torna mais rápida e leve de se usar. 
