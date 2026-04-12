@@ -30,3 +30,30 @@ print('------------------------------------')
 
 for chave in carro:
     print(f'{chave}: {carro[chave]}')
+print('------------------------------------')
+
+# Para criar chaves depois do dicionário já criado
+
+turma = {}
+turma['professor'] = 'Jairo'
+print(turma)
+print(turma['professor'])
+print('------------------------------------')
+
+# Para apagar alguma chave
+
+del carro['dono']
+print(carro)
+print('------------------------------------')
+
+# Para saber se uma chave existe sem travar o sistema caso ela não exista
+
+if carro.get('dono') is None:
+    print('Não existe')
+
+else:
+    print(carro['dono'])
+
+#               se existe     se não existe
+#                   |               |
+print(carro.get('dono',       'sem dono'))
