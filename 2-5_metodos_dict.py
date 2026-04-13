@@ -20,13 +20,17 @@ pessoa = {
 
 pessoa.setdefault('idade', 0)
 # print(pessoa['idade'])
-print(f'Quantas chaves tem no dicionário usando print(len(pessoa)): {len(pessoa)}')
+print(f'Quantas chaves tem no dicionário usando print(len(pessoa)):'
+      f'{len(pessoa)}')
 print('---------------------------')
-print(f'Quais chaves tem no dicionário usando print(list(pessoa.keys())): {list(pessoa.keys())}')
+print(f'Quais chaves tem no dicionário usando print(list(pessoa.keys())):'
+      f'{list(pessoa.keys())}')
 print('---------------------------')
-print(f'Quais valores tem no dicionário usando print(list(pessoa.values())): {list(pessoa.values())}')
+print(f'Quais valores tem no dicionário usando print(list(pessoa.values())):'
+      f'{list(pessoa.values())}')
 print('---------------------------')
-print(f'Quais itens tem no dicionário usando print(list(pessoa.items())):\n{list(pessoa.items())}')
+print(f'Quais itens tem no dicionário usando print(list(pessoa.items())):'
+      f'\n{list(pessoa.items())}')
 print('---------------------------')
 
 for valor in pessoa.values():
