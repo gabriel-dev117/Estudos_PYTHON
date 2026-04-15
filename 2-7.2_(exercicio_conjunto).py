@@ -70,3 +70,5 @@ o contador vai servir para contar quantas vezes o número aparece,
 se o contador for igual a 2, ele faz o .append() na n_repetidos e
 da o continue
 """
+
+
