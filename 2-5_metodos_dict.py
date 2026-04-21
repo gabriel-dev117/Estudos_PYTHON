@@ -91,3 +91,24 @@ p1 = {
 p1.update(nome = 'Aspas', time = 'MIBR')
 
 print(p1)
+
+
+print("------------------------------------")
+
+# É possível fazer união de dicionários
+pessoa = {
+    'nome': 'Gabriel',
+    'sobrenome': 'Lima'
+}
+
+dados_pessoa = {
+    'altura': 1.62,
+    'idade': 23,
+    'curso': 'Eng. Software'
+}
+
+pessoa_full = pessoa | dados_pessoa
+
+# print(pessoa)
+# print(dados_pessoa)
+print(type(pessoa_full))
