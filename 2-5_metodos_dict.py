@@ -92,7 +92,6 @@ p1.update(nome = 'Aspas', time = 'MIBR')
 
 print(p1)
 
-
 print("------------------------------------")
 
 # É possível fazer união de dicionários
