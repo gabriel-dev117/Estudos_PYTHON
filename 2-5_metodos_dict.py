@@ -9,7 +9,7 @@
 # copy - retorna uma cópia rasa (shallow copy)
 # get - obtém uma chave
 # pop - apaga um item com a chave especificada (del)
-# popitem - apafa o último iteem adicionado
+# popitem - apaga o último iteem adicionado
 # update - atualiza um dicionário com outro
 
 pessoa = {
