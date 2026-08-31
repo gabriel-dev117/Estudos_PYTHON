@@ -13,7 +13,8 @@ tenho itens que se repetem,
 quando um item se repetir no mesmo jogador, tenho que apenas somar
 """
 
-os.system('cls')
+import os
+
 drops_da_masmorra = [
     ("Kael", "Espada Longa"),
     ("Lyra", "Poção de Vida"),
@@ -29,30 +30,29 @@ drops_da_masmorra = [
     ("Kael", "Poção de Vida")
 ]
 
-drops = drops_da_masmorra
+drops  = drops_da_masmorra
 
 
-def inventario(espolio):
-    lobby = []
-    for player, item in drops:
-        jogadores = {}
-        if player not in jogadores:
-            jogadores[player] = {
-                item : 1
-            }
+os.system('cls')
 
-        elif (item) in (list(jogadores[player].keys())):
-            jogadores[player][item] += 1
+lobby = {}
 
-        elif (jogadores[player][item] == 50):
-            print(f"O slot atingiu a quantidade máxima de {item}")
+for player, item in drops:
+    if player not in lobby.keys():
+        lobby[player] = {item : 1}
 
-        else:
-            print("Algo deu errado aí viu")
 
-        lobby.append(jogadores)
-    return lobby
+    elif item not in lobby[player]:
+        lobby[player][item] = 1
 
-resultado = inventario(drops)
-for jogador in resultado:
-    print (jogador)
+
+    elif item in lobby[player].keys():
+        lobby[player][item] += 1
+
+
+
+print("-----------------------------")
+for jogador, inventario in lobby.items():
+    print(jogador, inventario)
+print("-----------------------------")
+
