@@ -16,24 +16,43 @@ drops_da_masmorra = [
 drops  = drops_da_masmorra
 
 
-lobby = []
+# lobby = []
+# for player, item in drops:
+#     jogadores = {}
+#     if (item) in (list(jogadores[player].keys())):
+#         jogadores[player][item] += 1
+
+#     elif (jogadores[player][item] == 50):
+#         print(f"O slot atingiu a quantidade máxima de {item}")
+
+#     if player not in (p for p in lobby):
+#         jogadores[player] = {
+#             item : 1
+#         }
+
+#     else:
+#         print("Algo deu errado aí viu")
+
+#     lobby.append(jogadores)
+
+# for jogador in lobby:
+#     print(jogador)
+                                                    # set(dict{})
+
+lobby = {}
+jogadores = set()
 for player, item in drops:
-    jogadores = {}
-    if player not in (p for p in lobby):
-        jogadores[player] = {
-            item : 1
-        }
+    # jogador = {}
+    if player not in list(lobby.keys()):
+        lobby[player] = {item : 1}
+        print("IF")
 
-    elif (item) in (list(jogadores[player].keys())):
-        jogadores[player][item] += 1
+    elif (player in list(lobby.keys())) and (item not in lobby[player][item]): # player, item in lobby.items()
+        lobby[player][item] += 1
+        print("ELSE")
 
-    elif (jogadores[player][item] == 50):
-        print(f"O slot atingiu a quantidade máxima de {item}")
 
-    else:
-        print("Algo deu errado aí viu")
 
-    lobby.append(jogadores)
-
-for jogador in lobby:
-    print(jogador)
+print("-----------------------------")
+for i in lobby:
+    print(i)
