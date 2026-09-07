@@ -1,3 +1,5 @@
+import os
+
 # Criando arquivos em Python
 # Usamos a função open para abrir 
 # um arquivo em Python (ele pode ou não existir)
@@ -15,11 +17,7 @@
 # Vamos falar mais sobre o módulo "os", mas :
 # os.remove ou unlink - apaga o arquivo
 # os.rename - trocar o nome ou move o arquivo
-# Vamos falar mais sobre o m´dulo json, mas:
-# json.dump = Gera um arquivo json
-#json.load
 
-import os
 
 # caminho = "C:\\Users\\estud\\OneDrive\\Documentos\\GABRIEL_DEV\\Criação de arquivo PYTHON\\"
 caminho = "4-6_(criar_arquivo).txt"
@@ -101,3 +99,7 @@ with open(caminho, 'w+', encoding = 'utf8') as arquivo: # Usar o "encoding" para
     )
     arquivo.seek(0,0)
     print(arquivo.read())
+
+# os.unlink(caminho)
+# os.remove(caminho) os dois servem para deletar o caminho
+# os.rename(caminho, 'novo_nome') serve para mudar o caminho/nome do arquivo
