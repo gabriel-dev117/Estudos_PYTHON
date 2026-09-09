@@ -10,6 +10,7 @@ refazer = todo ['fazer café']
 refazer = todo ['fazer café', 'caminhar']
 """
 
+"""
 to_do = []
 apagados = []
 
@@ -63,11 +64,10 @@ try:
 
 except:
     print("Algo deu errado fora da função")
-
+"""
 
 # Resolução do professor:
 
-"""
 import os
 
 
@@ -93,6 +93,7 @@ def desfazer(tarefas, tarefas_refazer):
     print(f'{tarefa=} removida da lista de tarefas.')
     tarefas_refazer.append(tarefa)
     print()
+    listar(tarefa)
 
 
 def refazer(tarefas, tarefas_refazer):
@@ -105,6 +106,7 @@ def refazer(tarefas, tarefas_refazer):
     print(f'{tarefa=} adicionada na lista de tarefas.')
     tarefas.append(tarefa)
     print()
+    listar(tarefa)
 
 
 def adicionar(tarefa, tarefas):
@@ -116,8 +118,28 @@ def adicionar(tarefa, tarefas):
     print(f'{tarefa=} adicionada na lista de tarefas.')
     tarefas.append(tarefa)
     print()
+    listar(tarefa)
 
 
+while True:
+    print('Comandos: listar, desfazer e refazer')
+    tarefa = input("Digite uma tarefa ou comando: ")
+
+    comandos = {
+        'listar': listar(tarefas),
+        'desfazer': desfazer(tarefas),
+        'refazer': refazer(tarefas, tarefas_refazer),
+        'clear': os.system('cls'),
+        'adicionar': adicionar(tarefa, tarefas)
+    }
+
+    comando = comandos.get(tarefa) if comandos.get(tarefa) is not None else \
+        comandos['adicionar']
+    comando()
+
+
+
+"""
 tarefas = []
 tarefas_refazer = []
 
